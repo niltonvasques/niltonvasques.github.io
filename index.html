@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Nilton Vasques</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css">
+  </head>
+
+  <body>
+    <div class="navbar-fixed">
+      <nav class="blue-grey darken-3">
+        <div class="nav-wrapper container">
+          <a href="#!" class="brand-logo">Nilton Vasques</a>
+          <ul class="right hide-on-med-and-down">
+            <li><a href="#me">Sobre</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projetos</a></li>
+            <li><a href="#contact">Contato</a></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+
+    <div id="me" class="section blue-grey darken-4 z-depth-2">
+      <div class="container">
+        <div class="center">
+          <h1 class="white-text">
+            Nilton Vasques
+          </h1>
+          <h3 class="white-text">
+            Developer
+          </h3>
+          <img id="profile" src="images/profile.jpg" alt="" class="circle responsive-img z-depth-3">
+          <p class="flow-text white-text">
+            Sou graduando em Ciência da Computação na  Universidade  Federal  da  Bahia,
+            com enfâse em agrupamento e extração de descritores fuzzy em documentos de texto.
+            Possuo experiências  nas  áreas de desenvolvimento de jogos, android, ruby on rails,
+            nodejs, Meteor, Linux, MySQL, Postgres e .NET.
+            Programo nas linguagens Java, Ruby, C/C++, SQL, Shell Script, Prolog e C#.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div id="skills" class="container">
+      <div class="section">
+        <h1>Skills</h1>
+        <div id="skills1" class="row">
+        </div>
+        <div id="skills2" class="row">
+        </div>
+        <div id="skills3" class="row">
+        </div>
+      </div>
+    </div>
+
+    <div id="projects" class="section">
+      <div class="container">
+        <div class="section">
+          <h1>Projetos</h1>
+          <div id="projects-placeholder" class="row">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section blue-grey darken-4 z-depth-2">
+      <div id="contact" class="container">
+        <div class="row">
+          <h2 class="white-text">Como me encontrar?</h2>
+          <span class="white-text flow-text">
+            Caso deseje entrar em contato comigo para conversar sobre algum trabalho, ou sobre a
+            vida o universo e tudo mais, sinta-se a vontade para me enviar uma mensagem para qualquer uma das redes sociais abaixo.
+            <p>
+              <i class="material-icons">email</i>
+              nilton.vasques{at}gmail.com
+            </p>
+            <p>
+              <i class="fa fa-twitter"></i>
+              <a target="_blank"  href="http://twitter.com/NiltonVasques">
+                http://twitter.com/NiltonVasques
+              </a>
+            </p>
+            <p>
+              <i class="fa fa-facebook-official"></i>
+              <a target="_blank"  href="https://www.facebook.com/niltonvasques">
+                https://www.facebook.com/niltonvasques
+              </a>
+            </p>
+            <p>
+              <i class="fa fa-google-plus"></i>
+              <a target="_blank"  href="https://plus.google.com/+NiltonVasques">
+                https://plus.google.com/+NiltonVasques
+              </a>
+            </p>
+            <!--
+              If you want contact me for talk about some work or other random talk about life,
+              universe and everything more, so please feel free to email me at
+              nilton.vasques{at}gmail.com.
+            -->
+          </span>
+        </div>
+      </div>
+    </div>
+
+    <footer class="page-footer grey darken-1">
+      <div class="container">
+      </div>
+      <div class="footer-copyright">
+        <div class="container">
+          © 2015 by Nilton Vasques
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script>
+    <script src="handlebars-v4.0.11.js"></script>
+    <script src="index.js"></script>
+  </body>
+</html>
+
+<script id="skill-template" type="text/x-handlebars-template">
+  <div class="col s12 m4">
+    <div class="icon-block">
+      <div id="logo-container" class="center">
+        <img id="logo-img" class="responsive-img" src="{{image_url}}">
+      </div>
+      <h5 class="center">{{name}}</h5>
+      <div class="progress">
+        <div class="determinate" style="width: {{level}}"></div>
+      </div>
+      <p class="light">{{description}}</p>
+    </div>
+  </div>
+</script>
+
+<script id="project-template" type="text/x-handlebars-template">
+  <div class="col s12 m6">
+    <div class="card">
+      <div class="card-image waves-effect waves-block waves-light">
+        <img class="activator" src="{{image}}">
+      </div>
+      <div class="card-content">
+        <div class="row">
+          <span class="card-title activator grey-text text-darken-4">
+            <div class="col s8 m8">
+              <p>
+                <i class="fa fa-{{fa}} {{fa_color}}"></i>
+                {{name}}
+              </p>
+            </div>
+            {{#if rating}}
+            <div class="col s4 m4">
+              <p class="amber-text text-darken-2">
+                {{rating}}
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star-half-o"></i>
+              </p>
+            </div>
+            {{/if}}
+          </span>
+        </div>
+        <div class="row">
+          <div class="col s12 m12">
+            <p><a target="_blank"  href="{{link}}">{{link_text}}</a></p>
+          </div>
+        </div>
+      </div>
+      <div class="card-reveal">
+        <span class="card-title grey-text text-darken-4">{{name}}</span>
+        <p class="flow-text">{{description}}</p>
+      </div>
+    </div>
+  </div>
+</script>
+
