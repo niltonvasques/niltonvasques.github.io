@@ -16,10 +16,10 @@ var helpers = {
       description: "Atualmente estou estudando a tecnologia, pois assim como todo desenvolvedor, procuro estar em constante aprendizado. Iniciei o aprendizado, após me fascinar com a robustez de uma biblioteca tão pequena e tão poderosa.", image: true},
   ],
   skills3 : [
+    { image_url: "images/docker.jpg", name: "Docker", level: "50%",
+      description: "Após conhecer o docker, toda a dor de cabeça nas fases de configuração de ambientes de desenvolvimento e de deploy se foram.", image: true },
     { image_url: "images/meteor.png", name: "Meteor", level: "10%",
-      description: "Estou estudando o Meteor como uma possível alternativa para desenvolvimento web de sistemas de tempo real, usando códigos reativos.", image: true},
-    { image_url: "images/docker.jpg", name: "Docker", level: "20%",
-      description: "Após conhecer o docker, toda a dor de cabeça nas fases de configuração de ambientes de desenvolvimento e de deploy se foram.", image: true}
+      description: "Estou estudando o Meteor como uma possível alternativa para desenvolvimento web de sistemas de tempo real, usando códigos reativos.", image: true }
   ],
   projects : [
     { name: "Pega Ladrão", image: "images/pega-ladrao.jpg", link_text: "Google Play",
