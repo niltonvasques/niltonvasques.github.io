@@ -8,11 +8,11 @@ h1, h2, h3 {
   width: 200px;
 }
 
-#logo-img{
+.logo-img {
   max-height: 100px;
   max-width: 50%;
 }
 
-#logo-container{
+.logo-container {
   height: 100px;
 }
